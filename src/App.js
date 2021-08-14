@@ -1,8 +1,11 @@
 import Form from "./components/Form";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <Form />
+    <Layout>
+      <Form />
+    </Layout>
   );
 }
 
