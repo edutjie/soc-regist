@@ -1,6 +1,6 @@
 function Layout(props) {
     return (
-        <main>{props.children}</main>
+        <main className='bg-gradient-to-b from-gradient1 to-gradient2'>{props.children}</main>
     )
 }
 

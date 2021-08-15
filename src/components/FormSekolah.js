@@ -2,17 +2,20 @@ import React from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
 
-const FormSekolah = ({submitForm}) => {
-  const { handleChange, values, handleSubmit, errors } = useForm(validate, submitForm);
+const FormSekolah = ({ submitForm }) => {
+  const { handleChange, values, handleSubmit, errors } = useForm(
+    validate,
+    submitForm
+  );
   return (
     <div>
       <form action="#" method="POST" onSubmit={handleSubmit}>
-        <div className="shadow sm:rounded-md sm:overflow-hidden flex">
-          <div className="px-4 py-5 bg-white space-y-6 sm:p-6 w-full">
+        <div className="rounded-2xl sm:overflow-hidden sm:flex bg-white shadow-lg">
+          <div className="px-4 py-5 bg-highlight space-y-6 sm:p-6 w-full">
             <div>
               <label
                 htmlFor="jenjang"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-primary"
               >
                 Jenjang Sekolah
               </label>
@@ -20,7 +23,7 @@ const FormSekolah = ({submitForm}) => {
                 id="jenjang"
                 name="jenjang"
                 autoComplete="jenjang"
-                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm"
                 value={values.jenjang}
                 onChange={handleChange}
               >
@@ -43,7 +46,7 @@ const FormSekolah = ({submitForm}) => {
                   type="text"
                   id="asalsekolah"
                   name="asalsekolah"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   value={values.asalsekolah}
                   onChange={handleChange}
                 />
@@ -64,7 +67,7 @@ const FormSekolah = ({submitForm}) => {
                   type="number"
                   id="nomortelepon"
                   name="nomortelepon"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   value={values.nomortelepon}
                   onChange={handleChange}
                 />
@@ -86,7 +89,7 @@ const FormSekolah = ({submitForm}) => {
                   id="alamat"
                   name="alamat"
                   rows={2}
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   placeholder="12, Jl. Tanjung Duren Raya No.4"
                   defaultValue={""}
                   value={values.alamat}
@@ -109,7 +112,7 @@ const FormSekolah = ({submitForm}) => {
                   id="provinsi"
                   name="provinsi"
                   autoComplete="provinsi"
-                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm"
                   value={values.provinsi}
                   onChange={handleChange}
                 >
@@ -133,7 +136,7 @@ const FormSekolah = ({submitForm}) => {
                   id="kota"
                   name="kota"
                   autoComplete="kota"
-                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm"
                   value={values.kota}
                   onChange={handleChange}
                 >
@@ -158,7 +161,7 @@ const FormSekolah = ({submitForm}) => {
                     id="kecamatan"
                     name="kecamatan"
                     autoComplete="kecamatan"
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm"
                     value={values.kecamatan}
                     onChange={handleChange}
                   >
@@ -182,7 +185,7 @@ const FormSekolah = ({submitForm}) => {
                     type="number"
                     id="kodepos"
                     name="kodepos"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                    className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                     value={values.kodepos}
                     onChange={handleChange}
                   />
@@ -193,7 +196,7 @@ const FormSekolah = ({submitForm}) => {
               </div>
             </div>
           </div>
-          <div className="px-4 py-5 bg-white space-y-6 sm:p-6 w-full">
+          <div className="px-4 py-5 space-y-6 sm:p-6 w-full">
             <div>
               <label
                 htmlFor="contactperson"
@@ -206,7 +209,7 @@ const FormSekolah = ({submitForm}) => {
                   type="text"
                   id="contactperson"
                   name="contactperson"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   value={values.contactperson}
                   onChange={handleChange}
                 />
@@ -232,7 +235,7 @@ const FormSekolah = ({submitForm}) => {
                     type="number"
                     name="nomorteleponcp"
                     id="nomorteleponcp"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                    className="focus:ring-indigo-900 focus:border-indigo-900 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                     placeholder="89999999"
                     value={values.nomorteleponcp}
                     onChange={handleChange}
@@ -258,7 +261,7 @@ const FormSekolah = ({submitForm}) => {
                   type="text"
                   id="cabanglomba"
                   name="cabanglomba"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   value={values.cabanglomba}
                   onChange={handleChange}
                 />
@@ -282,7 +285,7 @@ const FormSekolah = ({submitForm}) => {
                   name="pelatih"
                   value={values.pelatih}
                   onChange={handleChange}
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                 />
                 {errors.pelatih && (
                   <p className="text-xs text-red-500">{errors.pelatih}</p>
@@ -306,7 +309,7 @@ const FormSekolah = ({submitForm}) => {
                     type="number"
                     name="nomorteleponpelatih"
                     id="nomorteleponpelatih"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                    className="focus:ring-indigo-900 focus:border-indigo-900 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                     placeholder="89999999"
                     value={values.nomorteleponpelatih}
                     onChange={handleChange}
@@ -323,7 +326,7 @@ const FormSekolah = ({submitForm}) => {
             <div className="px-4 py-3 text-right sm:px-6">
               <button
                 type="submit"
-                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-900 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Save
               </button>
