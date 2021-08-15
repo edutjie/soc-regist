@@ -218,6 +218,27 @@ const FormSekolah = ({ submitForm }) => {
                 )}
               </div>
             </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Contact Person Email
+              </label>
+              <div className="mt-1">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="shadow-sm focus:ring-indigo-900 focus:border-indigo-900 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                  value={values.email}
+                  onChange={handleChange}
+                />
+                {errors.email && (
+                  <p className="text-xs text-red-500">{errors.email}</p>
+                )}
+              </div>
+            </div>
 
             <div className="grid grid-cols-3 gap-6">
               <div className="col-span-3">

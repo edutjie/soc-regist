@@ -32,17 +32,25 @@ export default function validateInfo(values) {
     //https://www.huzefril.com/posts/regex/regex-nomor-handphone/
     errors.nomorteleponpelatih = "Nomor Telepon tidak valid";
   }
-
+  
   if (!values.alamat.trim()) {
-    errors.alamat = "Alamat dibutuhkan";
-  }
+      errors.alamat = "Alamat dibutuhkan";
+    }
+    
+    if (!values.kodepos) {
+        errors.kodepos = "Kode Pos dibutuhkan";
+    } else if (!/^\d{5}(?:[-\s]\d{5})?$/g.test(values.kodepos)) {
+        //https://stackoverflow.com/questions/578406/what-is-the-ultimate-postal-code-and-zip-regex
+        errors.kodepos = "Kode Pos tidak valid";
+    }
+    
+    if (!values.email) {
+      errors.email = "Email dibutuhkan";
+    } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(values.email)) {
+      //https://www.huzefril.com/posts/regex/regex-nomor-handphone/
+      errors.email = "Email tidak valid";
+    }
 
-  if (!values.kodepos) {
-    errors.kodepos = "Kode Pos dibutuhkan";
-  } else if (!/^\d{5}(?:[-\s]\d{5})?$/g.test(values.kodepos)) {
-    //https://stackoverflow.com/questions/578406/what-is-the-ultimate-postal-code-and-zip-regex
-    errors.kodepos = "Kode Pos tidak valid";
-  }
   return errors;
 }
 

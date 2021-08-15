@@ -11,6 +11,7 @@ const useForm = (validate, callback) => {
     kecamatan: "",
     kodepos: "",
     contactperson: "",
+    email: "",
     nomorteleponcp: "",
     cabanglomba: "",
     pelatih: "",
