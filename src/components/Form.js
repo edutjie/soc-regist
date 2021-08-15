@@ -18,7 +18,7 @@ function Form() {
         {!isSubmitted ? (
           <FormSekolah submitForm={submitForm} />
         ) : (
-          <h1>Form telah terkirim</h1>
+          <h1 class="h-screen">Form telah terkirim</h1>
         )}
       </div>
     </div>

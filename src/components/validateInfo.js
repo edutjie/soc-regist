@@ -22,13 +22,13 @@ export default function validateInfo(values) {
   }
   if (!values.nomorteleponcp) {
     errors.nomorteleponcp = "Nomor Telepon dibutuhkan";
-  } else if (!/^(\+62|62|0)8[1-9][0-9]{6,9}$/g.test(values.nomorteleponcp)) {
+  } else if (!/^8[1-9][0-9]{6,9}$/g.test(values.nomorteleponcp)) {
     //https://www.huzefril.com/posts/regex/regex-nomor-handphone/
     errors.nomorteleponcp = "Nomor Telepon tidak valid";
   }
   if (!values.nomorteleponpelatih) {
     errors.nomorteleponpelatih = "Nomor Telepon dibutuhkan";
-  } else if (!/^(\+62|62|0)8[1-9][0-9]{6,9}$/g.test(values.nomorteleponpelatih)) {
+  } else if (!/^8[1-9][0-9]{6,9}$/g.test(values.nomorteleponpelatih)) {
     //https://www.huzefril.com/posts/regex/regex-nomor-handphone/
     errors.nomorteleponpelatih = "Nomor Telepon tidak valid";
   }
@@ -46,7 +46,7 @@ export default function validateInfo(values) {
     
     if (!values.email) {
       errors.email = "Email dibutuhkan";
-    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)) {
+    } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(values.email)) {
       //https://www.huzefril.com/posts/regex/regex-nomor-handphone/
       errors.email = "Email tidak valid";
     }

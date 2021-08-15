@@ -1,7 +1,8 @@
 import React from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
-import PictureCard from "./Picture";
+import PictureCard from "./photocard";
+import JenjangSelection from "./JenjangSelection";
 
 const FormSekolah = ({ submitForm }) => {
   const { handleChange, values, handleSubmit, errors } = useForm(
@@ -20,20 +21,7 @@ const FormSekolah = ({ submitForm }) => {
               >
                 Jenjang Sekolah
               </label>
-              <select
-                id="jenjang"
-                name="jenjang"
-                autoComplete="jenjang"
-                className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm"
-                value={values.jenjang}
-                onChange={handleChange}
-              >
-                <option disabled selected value>
-                  Pilih Jenjang Sekolahmu
-                </option>
-                <option>SMA</option>
-                <option>SMP</option>
-              </select>
+              <JenjangSelection/>
             </div>
             <div>
               <label
