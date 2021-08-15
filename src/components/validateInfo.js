@@ -46,7 +46,7 @@ export default function validateInfo(values) {
     
     if (!values.email) {
       errors.email = "Email dibutuhkan";
-    } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(values.email)) {
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)) {
       //https://www.huzefril.com/posts/regex/regex-nomor-handphone/
       errors.email = "Email tidak valid";
     }
