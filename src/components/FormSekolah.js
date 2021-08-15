@@ -1,6 +1,7 @@
 import React from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
+import PictureCard from "./Picture";
 
 const FormSekolah = ({ submitForm }) => {
   const { handleChange, values, handleSubmit, errors } = useForm(
@@ -353,6 +354,9 @@ const FormSekolah = ({ submitForm }) => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="mt-3">
+            <PictureCard/>
         </div>
       </form>
     </div>
