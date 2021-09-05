@@ -15,7 +15,12 @@ module.exports = {
         gradient1: "#fcd0a3",
         gradient2: "#7a8ea7",
         gradient3: "#eeebe3",
+        tosca: "#1ca390",
+        tosca2: "#118575",
       },
+      backgroundImage: (theme) => ({
+        "wallpaper": "url('/src/images/wallpaper2.jpg')",
+      }),
     },
   },
   variants: {

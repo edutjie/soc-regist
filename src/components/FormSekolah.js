@@ -12,7 +12,7 @@ const FormSekolah = ({ submitForm }) => {
   return (
     <div>
       <form action="#" method="POST" onSubmit={handleSubmit}>
-        <div className="rounded-2xl sm:overflow-hidden sm:flex bg-white shadow-lg mt-4">
+        <div className="rounded-2xl sm:overflow-hidden sm:flex bg-white bg-opacity-25 border-solid border-2 shadow-lg mt-4">
           <div className="px-4 py-5 bg-highlight space-y-6 sm:p-6 w-full">
             <div>
               <label
@@ -336,7 +336,7 @@ const FormSekolah = ({ submitForm }) => {
             <div className="px-4 py-3 text-right sm:px-6">
               <button
                 type="submit"
-                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-900 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-900"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-tosca hover:bg-tosca2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-900"
               >
                 Save
               </button>

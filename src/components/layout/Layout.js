@@ -1,6 +1,6 @@
 function Layout(props) {
     return (
-        <main className='bg-gradient-to-b from-gradient1 to-gradient2'>
+        <main className='bg-wallpaper bg-cover bg-fixed bg-no-repeat'>
             {props.children}
         </main>
     )
